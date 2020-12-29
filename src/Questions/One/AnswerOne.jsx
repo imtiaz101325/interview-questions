@@ -41,7 +41,16 @@ export default function AnswerOne() {
         <br />
         <input type="submit" value="submit" />
       </div>
+      <br />
+      <br />
       <div>
+        <div>
+          <label>Filter section </label>
+          <select name="moviepref">
+            <option></option>
+            <option value={1}>A</option>
+          </select>
+        </div>
         <div>
           <h2>Section A</h2>
           <form>
@@ -50,16 +59,9 @@ export default function AnswerOne() {
               <tr>
                 <td>
                   <label>Gender: </label>
-                  All <input type="checkbox" />
-                  Male <input type="checkbox" />
-                  Female <input type="checkbox" />
-                </td>
-                <td>
-                  <label>Section</label>
-                  <select name="moviepref">
-                    <option></option>
-                    <option value={1}>A</option>
-                  </select>
+                  All <input type="radio" />
+                  Male <input type="radio" />
+                  Female <input type="radio" />
                 </td>
               </tr>
               <tr>
@@ -91,29 +93,25 @@ export default function AnswerOne() {
         </div>
         <div>
           <h2>Section B</h2>
-          <table>
-            <tr>
-              <td>
-                <label>Gender: </label>
-                All <input type="checkbox" />
-                Male <input type="checkbox" />
-                Female <input type="checkbox" />
-              </td>
-              <td>
-                <label>Section</label>
-                <select name="moviepref">
-                  <option></option>
-                  <option value={1}>A</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Name: </label>
-                <input type="text" />
-              </td>
-            </tr>
-          </table>
+          <form>
+            <h3>Filters</h3>
+            <table>
+              <tr>
+                <td>
+                  <label>Gender: </label>
+                  All <input type="radio" />
+                  Male <input type="radio" />
+                  Female <input type="radio" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Name: </label>
+                  <input type="text" />
+                </td>
+              </tr>
+            </table>
+          </form>
           <table style={{ width: "100%" }}>
             <tr>
               <th>Name</th>
