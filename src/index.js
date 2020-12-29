@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
 import App from "./App";
-import One from "./Questions/One"
-import Two from "./Questions/Two"
-// import Three from "./Questions/Three"
+import One from "./Questions/One";
+import Two from "./Questions/Two";
+import Three from "./Questions/Three";
 // import Four from "./Questions/Four"
+
+// Context
+import AuthenticationProvider from "./context/Authentication";
 
 // Functions
 import reportWebVitals from "./reportWebVitals";
@@ -28,10 +31,12 @@ ReactDOM.render(
         <Route path="/two">
           <Two />
         </Route>
+        <AuthenticationProvider>
+          <Route exact path="/three">
+            <Three />
+          </Route>
+        </AuthenticationProvider>
         {/* <Route exact path="one">
-          <One />
-        </Route>
-        <Route exact path="one">
           <One />
         </Route> */}
         <Route>
