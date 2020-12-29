@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
 
-function App() {
+// Functions
+import { mapNumToWord } from "./utilities";
+
+// Styles
+import "./App.css";
+
+// Assets
+import logo from "./logo.svg";
+
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Interview Question</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Follow instructions in README.md</p>
+        <ul>
+          {[1, 2, 3, 4].map((num) => (
+            <li>
+              <Link to={`/${mapNumToWord(num)}`} key={num}>
+                Answer preview to question {mapNumToWord(num, true)}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </header>
     </div>
   );
 }
-
-export default App;
