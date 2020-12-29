@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Components
 import App from "./App";
 import One from "./Questions/One"
-// import Two from "./Questions/Two"
+import Two from "./Questions/Two"
 // import Three from "./Questions/Three"
 // import Four from "./Questions/Four"
 
@@ -14,7 +14,6 @@ import reportWebVitals from "./reportWebVitals";
 
 // Styles
 import "./index.css";
-import { mapNumToWord } from "./utilities";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,11 +22,21 @@ ReactDOM.render(
         <Route exact path="/">
           <App />
         </Route>
-        {[1, 2, 3, 4].map((num) => (
-          <Route path={`/${mapNumToWord(num)}`}>
-            <One />
-          </Route>
-        ))}
+        <Route path="/one">
+          <One />
+        </Route>
+        <Route path="/two">
+          <Two />
+        </Route>
+        {/* <Route exact path="one">
+          <One />
+        </Route>
+        <Route exact path="one">
+          <One />
+        </Route> */}
+        <Route>
+          <div>Nope</div>
+        </Route>
       </Switch>
     </Router>
   </React.StrictMode>,
