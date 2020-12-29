@@ -3,15 +3,21 @@ import { createContext, useState } from "react"
 export const AuthContext = createContext()
 
 export default function AuthenticationProvider({ children }) {
+  const [loading, setLoading] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
 
   function handleLogin() {
-    setTimeout(() => setLoggedIn(true), 3000)
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+      setLoggedIn(true)
+    }, 3000)
   }
 
   return <AuthContext.Provider value={{
     loggedIn,
-    handleLogin
+    handleLogin,
+    loading
   }}>
     {children}
   </AuthContext.Provider>
