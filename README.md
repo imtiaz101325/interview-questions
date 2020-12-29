@@ -4,7 +4,7 @@
 
 - Please find relevant code snippets in the `./Questions` folder.
 - Code for question 1 is under `./Questions/One` etc.
-- Please make use of the existing components and data in the question folder if there are any present.
+- Please make use of the existing components/data/functions in the question folder if there are any present.
 - Bonus if you can write tests
 
 ## Questions
