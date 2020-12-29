@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
 import App from "./App";
-// import One from "./One"
-// import Two from "./Two"
-// import Three from "./Three"
-// import Four from "./Four"
+import One from "./Questions/One"
+// import Two from "./Questions/Two"
+// import Three from "./Questions/Three"
+// import Four from "./Questions/Four"
 
 // Functions
 import reportWebVitals from "./reportWebVitals";
@@ -25,7 +25,7 @@ ReactDOM.render(
         </Route>
         {[1, 2, 3, 4].map((num) => (
           <Route path={`/${mapNumToWord(num)}`}>
-            <div />
+            <One />
           </Route>
         ))}
       </Switch>
