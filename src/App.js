@@ -16,10 +16,14 @@ export default function App() {
         <h1>Interview Question</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>Follow instructions in README.md</p>
-        <ul>
-          {[1, 2, 3, 4].map((num) => (
-            <li>
-              <Link to={`/${mapNumToWord(num)}`} key={num}>
+        <ul style={{ textAlign: "left" }}>
+          {[1, 2, 3 ].map((num) => (
+            <li style={{ listStyle: "none" }}>
+              <Link
+                to={`/${mapNumToWord(num)}`}
+                key={num}
+                style={{ color: "#fff" }}
+              >
                 Answer preview to question {mapNumToWord(num, true)}
               </Link>
             </li>

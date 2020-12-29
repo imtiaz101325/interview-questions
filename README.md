@@ -23,3 +23,9 @@ _The objective of this exercise is to see if you can [think in React](https://re
 - You can use a library to debounce the call
 
 ![Screenshot](public/two.png?raw=true "Example UI")
+
+[Three] Write an HOC and wrap `SensitiveUI` with it so that unauthenticated users only see `PublicUI`
+
+- As a bonus handle the loading state inside the HOC
+
+![Screenshot](public/three.png?raw=true "Example UI")
